@@ -14,7 +14,7 @@ const Categories = () => {
     axios.get("https://www.themealdb.com/api/json/v1/1/categories.php")
       .then(response => {
         setCategoriesData(response.data.categories);
-        console.log(categoriesData);
+        // console.log(categoriesData);
       })
       .catch(error => console.log(error.message))
 
@@ -25,13 +25,14 @@ const Categories = () => {
     <ScrollView>
       {
         categoriesData.map((item, key) => {
+          // console.log(item)
           return (
             <CategoriesComponents
               key={item.idCategory}
               name={item.strCategory}
               image={item.strCategoryThumb}
+              idCategory={item.idCategory}
               description={item.strCategoryDescription}
-              data={item}
             />
           )
         })

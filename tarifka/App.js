@@ -1,12 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Button } from 'react-native';
-import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { Ionicons } from '@expo/vector-icons';
 
-
+import Food from './screens/Food';
 import Categories from './screens/Categories';
 
 export default function App() {
@@ -21,6 +20,13 @@ export default function App() {
           component={Categories}
           options={{
             headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="FoodScreen"
+          component={Food}
+          options={{
+            headerShown : false,
           }}
         />
       </Stack.Navigator>
@@ -41,7 +47,6 @@ export default function App() {
                 <View style={{ flexDirection: 'row', }}>
                   <Text style={{ fontWeight: '300', fontSize: 25, color: 'white' }}>tarif</Text>
                   <Text style={{ fontWeight: 'bold', fontSize: 25, color: 'white' }}>ka</Text>
-
                 </View>
               )
             },
