@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native'
 import React, { useEffect } from 'react';
 import { useNavigation } from '@react-navigation/native';
+import { color } from '../colors/colors';
 
 const CategoriesComponents = (props) => {
 
@@ -64,7 +65,7 @@ const styles = StyleSheet.create({
     color: 'grey',
     marginTop: 10,
     marginLeft: 10,
-    color: "#DAA42E"
+    color: color.orange
   },
   image: {
     width: 150,

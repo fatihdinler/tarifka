@@ -8,6 +8,7 @@ import { Ionicons } from '@expo/vector-icons';
 import Food from './screens/Food';
 import Categories from './screens/Categories';
 import Meal from './screens/Meal';
+import { color } from './colors/colors';
 
 export default function App() {
 
@@ -49,7 +50,7 @@ export default function App() {
           component={StackNavigation}
           options={{
             headerTitle: '',
-            headerStyle: { backgroundColor: '#DAA42E' },
+            headerStyle: { backgroundColor: color.orange },
             headerLeft: () => {
               return (
                 <View style={{ flexDirection: 'row', }}>

@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View , Button, ScrollView} from 'react-native'
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
+import axios from 'axios';
+import { color } from '../colors/colors';
 
 import MealsComponents from '../components/MealsComponents'
 
@@ -23,6 +24,7 @@ const Food = ({route}) => {
         meals.map(item => {
           return(
             <MealsComponents
+              key={item.idMeal}
               id={item.idMeal}
               name={item.strMeal}
               image={item.strMealThumb}
@@ -43,6 +45,6 @@ const styles = StyleSheet.create({
     color: 'grey',
     marginTop: 10,
     marginLeft: 10,
-    color: "#DAA42E"
+    color: color.orange,
   }
 })
