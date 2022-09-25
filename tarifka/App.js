@@ -7,6 +7,7 @@ import { Ionicons } from '@expo/vector-icons';
 
 import Food from './screens/Food';
 import Categories from './screens/Categories';
+import Meal from './screens/Meal';
 
 export default function App() {
 
@@ -25,6 +26,13 @@ export default function App() {
         <Stack.Screen
           name="FoodScreen"
           component={Food}
+          options={{
+            headerShown : false,
+          }}
+        />
+        <Stack.Screen
+          name="MealScreen"
+          component={Meal}
           options={{
             headerShown : false,
           }}
